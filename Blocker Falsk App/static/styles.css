@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card, .acknowledgment-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2d3436;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+h1:hover {
+    color: #0984e3;
+}
+
+p {
+    font-size: 1rem;
+    color: #636e72;
+    margin-bottom: 2rem;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2d3436;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="time"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="time"]:focus {
+    outline: none;
+    border-color: #74b9ff;
+    box-shadow: 0 0 8px rgba(116, 185, 255, 0.5);
+}
+
+form {
+    text-align: left;
+    width: 100%;
+    max-width: 500px;
+}
+
+.btn {
+    background-color: #0984e3;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #74b9ff;
+    transform: translateY(-2px);
+}
+
+.acknowledgment-card .btn {
+    margin-top: 1.5rem;
+    display: inline-block;
+    background-color: #00b894;
+}
+
+.acknowledgment-card .btn:hover {
+    background-color: #55efc4;
+}

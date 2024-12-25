@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Blocker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Website Blocker</h1>
+            <p>Block websites during working hours to stay productive!</p>
+            <form method="POST" action="/">
+                <label for="websites">Websites to Block (comma-separated):</label>
+                <input type="text" id="websites" name="websites" placeholder="e.g., reddit.com, instagram.com" required>
+
+                <label for="start_time">Start Time (HH:MM:SS):</label>
+                <input type="time" id="start_time" name="start_time" required>
+
+                <label for="end_time">End Time (HH:MM:SS):</label>
+                <input type="time" id="end_time" name="end_time" required>
+
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
