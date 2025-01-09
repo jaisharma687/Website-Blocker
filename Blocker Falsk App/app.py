@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect
 import time
 import datetime as dt
 
@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 ip_localmachine = "127.0.0.1"
 
-# Hosts file path for Windows (change path if you're using Linux/Mac)
-hosts_path = "C:\\Windows\\System32\\drivers\\etc\\hosts"
+# hosts_path = "C:\\Windows\\System32\\drivers\\etc\\hosts" # for windows
+hosts_path = "/etc/hosts" #for mac
 
 def block_websites(website_list):
     with open(hosts_path, "r+") as file:
